@@ -1,0 +1,570 @@
+@import helpers/vars
+@import helpers/mixins
+header
+    background: url(../img/header-background-trips.jpg) no-repeat
+    background-position: center top
+
+.header
+    margin-bottom: 148px
+
+.container
+    align-items: center
+    display: flex
+    justify-content: space-between
+    padding: 20px
+
+    h2
+        font-size: 36px
+        color: #ffffff
+        font-weight: 500
+        font-family: "Exo2.0"
+        text-align: center
+        +media(768px)
+            text-align: left
+    .header-title
+        font-size: 14px
+        letter-spacing: 1px
+        text-transform: uppercase
+        text-decoration: none
+        color: #fff
+        font-weight: 400
+        font-family: "Rubik"
+        text-align: right
+        &:hover
+            color: #ffb700
+            transition: 0.5s
+
+    .logo-h2
+        font-size: 58px
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: #ffffff
+        font-weight: 400
+        font-family: "Rubik"
+        text-align: center
+    .logo-p
+        max-width: 528px
+        height: 62px
+        font-size: 16px
+        line-height: 24px
+        color: #ffffff
+        font-weight: 400
+        margin-bottom: 29px
+        font-style: italic
+        font-family: "Rubik"
+        text-align: center
+
+    .button
+        border: 2px solid #ffb700
+        border-radius: 25px
+        padding: 12px 30px
+        align-items: center
+        background-color: #ffb700
+        font-size: 16px
+        letter-spacing: 1px
+        line-height: 110px
+        text-transform: uppercase
+        color: #fdfcfb
+        font-weight: 400
+        font-family: "Rubik"
+        text-align: center
+        text-decoration: none
+        &:hover
+            color: #999
+            transition: 0.5
+    .header-footer
+        font-size: 36px
+        letter-spacing: 1px
+        line-height: 44px
+        text-transform: uppercase
+        color: #333333
+        font-weight: 400
+        font-family: "Rubik"
+        text-align: center
+    .header-footer-p
+        font-size: 16px
+        line-height: 24px
+        color: #333333
+        font-weight: 400
+        font-style: italic
+        font-family: "Rubik"
+        text-align: center
+.header-title-info
+    +media(1024px)
+        margin-bottom: 263px
+.header-title-info
+    position: relative
+    text-align: center
+    &::before
+        content: ""
+        position: absolute
+        top: -45px
+        left: 50%
+        transform: translateX(-50%)
+        width: 40%
+        min-width: 300px
+        height: 40px
+        opacity: 0.6
+        border-left: 4px #fff solid
+        border-top: 4px #fff solid
+        border-right: 4px #fff solid
+    &::after
+        content: ""
+        position: absolute
+        bottom: -15px
+        left: 50%
+        transform: translateX(-50%)
+        width: 40%
+        min-width: 300px
+        height: 95px
+        opacity: 0.6
+        border-left: 4px #fff solid
+        border-bottom: 4px #fff solid
+        border-right: 4px #fff solid
+
+body .company
+        justify-content: center
+        max-width: 960px
+        gap: 31px
+
+.company-main
+    font-size: 36px
+    letter-spacing: 1px
+    line-height: 40px
+    text-transform: uppercase
+    color: #333333
+    font-weight: 400
+    font-family: "Rubik"
+
+.company-main-info
+    max-width: 228px
+    height: 78px
+    font-size: 16px
+    line-height: 22px
+    color: #555555
+    font-weight: 400
+    font-style: italic
+    font-family: "Rubik"
+.company-main-button
+    padding: 15px 32px
+    border: 1px solid
+    background-color: #ffb700
+    border-radius: 23px
+    text-decoration: none
+    font-size: 16px
+    letter-spacing: 1px
+    // line-height: 110px
+    text-transform: uppercase
+    color: #fefefe
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+
+.company-main-warning
+    max-width: 228px
+    height: 78px
+    font-size: 13px
+    padding: 19px
+    color: #bbbbbb
+    font-weight: 400
+    font-family: "Rubik"
+.deserted-island-menu
+    margin-bottom: 10px
+.company-main-subtitle
+    padding: 48px
+.company-main-figcaption
+    padding: 25px
+.company-img
+    +media(1024px)
+        width: 60%
+.main-tours
+    +media(1024px)
+        width: 90%
+.company-figcaption
+    padding: 0 15px
+
+.company-main-tour:hover
+    filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
+    transition: 0.5s
+    background-color: #fff
+.main-tours:hover
+    filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
+    transition: 0.5s
+    background-color: #fff
+.back
+    gap: 10px
+.all-info
+    +media(1024px)
+        align-self: start
+        width: 33%
+.svg
+    display: inline-block
+
+.company-main-tour-logo
+    padding: 15px
+.company-main-tour-title
+    font-size: 18px
+    color: #333333
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+.tours-title
+    text-align: left
+.company-main-tour-price
+    font-size: 24px
+    margin: 10px
+    color: #0099ff
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+.company-main-tour-info
+    text-align: center
+    font-size: 13px
+    line-height: 19px
+    color: #999999
+    font-weight: 400
+    font-family: "Rubik"
+.tours-info
+    text-align: left
+.company-main-tour-button-plan
+    font-size: 12px
+    letter-spacing: 0px
+    text-decoration: none
+    text-transform: uppercase
+    color: #0099ff
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+
+.deserted-island-title
+    line-height: 42px
+    text-transform: uppercase
+    color: #333333
+    font-weight: 400
+    font-family: "Rubik"
+.deserted-island-subtitle
+
+    flex-direction: row
+    padding-top: 10px
+    font-size: 16px
+    line-height: 24px
+    color: #333333
+    font-weight: 400
+    font-style: italic
+    font-family: "Rubik"
+
+.deserted-island-buy-tour
+    display: flex
+    gap: 10px
+.company-main-tour-time
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+.company-main-tour-order
+    font-size: 13px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #ffb700
+    font-weight: 400
+    font-family: "Rubik"
+    text-decoration: none
+.deserted-island-buy
+    border-radius: 23px
+    border: 1px solid
+    padding: 16px 28px
+    filter: drop-shadow(0px 4px 10.5px rgba(193,139,1,0.24))
+    background-color: #ffb700
+    font-size: 16px
+    letter-spacing: 1px
+    text-decoration: none
+    text-transform: uppercase
+    color: #fff
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+.deserted-island-details
+    padding: 16px 28px
+    border: 1px solid
+    border-radius: 23px
+    background-color: rgba(0,153,255,0)
+    border: 2px solid #0099ff
+    font-size: 16px
+    letter-spacing: 1px
+    text-decoration: none
+    text-transform: uppercase
+    color: #0099ff
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+.row.deserted-island-price
+    +media(320px)
+        width: 100%
+    +media(768px)
+        width: 29%
+.deserted-island-price-tour
+    background-color: #edf2f5
+html body .container.wave
+    padding: 73px
+    max-width: 100%
+    background-image: url(../img/background-wave.png)
+    background-position: center
+    background-size: cover
+    margin: 0
+    +media(320px)
+        padding: 0
+        gap: 50px
+    +media(1024px)
+        padding: 73px
+        gap: 20px
+.wave-main
+    +media(320px)
+        gap: 20px
+    +media(1024px)
+        width: 50%
+        gap: 0 
+
+.wave-firm-info
+    font-size: 16px
+    color: #fff
+    font-weight: 400
+    font-style: italic
+    font-family: "Rubik"
+.wave-info-client
+    font-size: 18px
+    color: #fff
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+.wave-client
+    font-size: 14px
+    color: #999999
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+.wave-logo
+    font-size: 51px
+    letter-spacing: 2px
+    line-height: 66px
+    text-transform: uppercase
+    color: #ffffff
+    font-weight: 400
+    font-family: "Rubik"
+.wave-button
+    display: block
+    width: 35%
+    +media(320px)
+        width: 100%
+    +media(768px)
+        width: 35%
+.wave-logo-blue
+    font-size: 55px
+    letter-spacing: 2px
+    line-height: 66px
+    text-transform: uppercase
+    color: #0099ff
+    font-weight: 400
+    font-family: "Rubik"
+.wave-subtitle
+    margin-bottom: 39px
+    height: 75px
+    font-size: 16px
+    color: #ffffff
+    font-weight: 400
+    font-family: "PT Sans"
+
+.special-tour-title
+    font-size: 36px
+    text-transform: uppercase
+    color: #333333
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+.special-tour-subtitle
+    font-size: 16px
+    color: #333333
+    font-weight: 400
+    font-style: italic
+    font-family: "Rubik"
+    text-align: center
+.desert-island
+    gap: 30px
+
+
+.card-logo
+    width: 100%
+.additional-info
+    font-size: 36px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #333333
+    font-weight: 400
+    font-family: "Rubik"
+.info-eat
+    padding: 15px
+    text-align: center
+    border: 1px solid
+    background-image: url(../img/background-info-eat.png)
+    background-size: cover
+    +media(1024px)
+        width: 30%
+        height: 80%
+
+.info-hotel
+    padding: 15px
+    text-align: center
+    border: 1px solid
+    background-image: url(../img/background-info-hotel.png)
+    background-size: cover
+    +media(1024px)
+        width: 30%
+        height: 80%
+.info-eat-title
+    font-size: 18px
+    line-height: 24px
+    color: #ffffff
+    font-weight: 400
+    font-family: "Rubik"
+.info-eat-size-file
+    font-size: 13px
+    line-height: 19px
+    color: #bbbbbb
+    font-weight: 400
+    font-family: "Rubik"
+.info-eat-subtitle
+    width: 90%
+    text-align: left
+    color: #fefefe
+    font-weight: 400
+    font-family: "Rubik"
+.info-eat-download
+    width: 65%
+    border-radius: 16px
+    background-color: rgba(255,183,0,0)
+    border: 2px solid #ffb700
+    padding: 6px 35px
+    font-size: 12px
+    letter-spacing: 0px
+
+    text-transform: uppercase
+    color: #ffb700
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+    text-decoration: none
+.info-consult
+    padding: 15px
+    position: relative
+    text-align: center
+    padding: 0 45px
+    &::before
+        content: ""
+        position: absolute
+        left: 0
+        top: 0
+        border-left: 4px #ffb700 solid
+        border-top: 4px #ffb700 solid
+        border-bottom: 4px #ffb700 solid
+        width: 54px
+        height: 100%
+    &::after
+        content: ""
+        position: absolute
+        right: 0
+        top: 0
+        border-right: 4px #ffb700 solid
+        border-top: 4px #ffb700 solid
+        border-bottom: 4px #ffb700 solid
+        width: 54px
+        height: 100%
+
+    +media(1024px)
+        width: 30%
+        height: 80%
+
+.consult-title
+    font-size: 18px
+    letter-spacing: 1px
+    line-height: 26px
+    color: #333333
+    font-weight: 400
+    font-family: "Rubik"
+.consult-title-info
+    font-size: 13px
+    line-height: 16px
+    color: #999999
+    font-weight: 400
+    font-family: "Rubik"
+.consult-button
+    text-decoration: none
+    font-size: 18px
+    line-height: 26px
+    color: #0099ff
+    font-weight: 400
+    font-family: "Rubik"
+.consult-name
+    font-size: 18px
+    line-height: 26px
+    color: #333333
+    font-weight: 400
+    font-family: "Rubik"
+.consult-consult
+    font-size: 13px
+    line-height: 19px
+    color: #999999
+    font-weight: 400
+    font-family: "PT Sans"
+.footer
+    max-width: 100%
+    margin: 0
+    padding: 0
+
+.footer-text
+    text-align: center
+    width: 100%
+    background-color: #1a1a1a
+.background
+    background-image: url(../img/footer-back.png)
+    background-position: center
+.footer-black
+    background-color: #1a1a1a
+    font-size: 13px
+    color: #fff
+    font-family: "Rubik"
+    padding: 10px
+    margin: 0
+.man-oleg
+    position: relative
+    text-align: center
+    +media(1024px)
+        width: 50%
+    &::before
+        content: ""
+        height: 100%
+        width: 35%
+        position: absolute
+        opacity: 0.100
+        border: 4px #5d6970 solid
+        border-right: none
+        top: 15px
+        left: 0
+    &::after
+        content: ""
+        position: absolute
+        width: 35%
+        height: 100%
+        border: 4px #5d6970 solid
+        border-left: none
+        top: 15px
+        right: 0
+        opacity: 0.102
+@media (max-width: 768px)
+    .header-subtitle
+        flex-direction: column
+        align-items: center
+        display: flex
+    .header-img
+        justify-content: center
+
+@import  components/header
+@import  components/footer
