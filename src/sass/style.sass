@@ -6,6 +6,11 @@ header
 
 .header
     margin-bottom: 148px
+    .header-logo
+        +media(768px)
+            flex-direction: column
+        +media(1020px)
+            flex-direction: row
 
 .container
     align-items: center
@@ -196,7 +201,7 @@ body .company
 .all-info
     +media(1024px)
         align-self: start
-        width: 33%
+        width: 23%
 .svg
     display: inline-block
 
@@ -314,6 +319,8 @@ html body .container.wave
     +media(320px)
         padding: 0
         gap: 50px
+    +media(768px)
+        padding: 20px
     +media(1024px)
         padding: 73px
         gap: 20px
@@ -356,7 +363,7 @@ html body .container.wave
     +media(320px)
         width: 100%
     +media(768px)
-        width: 35%
+        width: 55%
 .wave-logo-blue
     font-size: 55px
     letter-spacing: 2px
@@ -558,6 +565,29 @@ html body .container.wave
         top: 15px
         right: 0
         opacity: 0.102
+.adapt-figure
+    +media(768px)
+        width: 100%
+.adapt-col
+    +media(768px)
+        width: 50%
+.adapt-cols 
+    +media(768px)
+        align-items: center
+.just
+    +media(320px)
+        flex-wrap: wrap
+        width: 66%
+    +media(768px)
+        justify-content: center
+.adapt-cards
+    +media(425px)
+        width: 66%
+    +media(768px)
+        width: 100%
+    +media(1024px)
+        width: 80%
+
 @media (max-width: 768px)
     .header-subtitle
         flex-direction: column
@@ -565,6 +595,8 @@ html body .container.wave
         display: flex
     .header-img
         justify-content: center
+
+    
 
 @import  components/header
 @import  components/footer
