@@ -11,7 +11,9 @@ header
             flex-direction: column
         +media(1020px)
             flex-direction: row
-
+.col .general
+    +media(768px)
+        width: 100%
 .container
     align-items: center
     display: flex
@@ -364,6 +366,8 @@ html body .container.wave
         width: 100%
     +media(768px)
         width: 55%
+    +media(1024px)
+        width: 35%
 .wave-logo-blue
     font-size: 55px
     letter-spacing: 2px
