@@ -99,6 +99,9 @@ header
 .header-title-info
     +media(1024px)
         margin-bottom: 263px
+    .button:hover
+        transform: scale(1.1)
+        color: #856789
 .header-title-info
     position: relative
     text-align: center
@@ -280,7 +283,6 @@ body .company
     border-radius: 23px
     border: 1px solid
     padding: 16px 28px
-    filter: drop-shadow(0px 4px 10.5px rgba(193,139,1,0.24))
     background-color: #ffb700
     font-size: 16px
     letter-spacing: 1px
@@ -290,6 +292,9 @@ body .company
     font-weight: 400
     font-family: "Rubik"
     text-align: center
+    a:hover
+        filter: drop-shadow(0px 4px 10.5px rgba(193,139,1,0.24))
+
 .deserted-island-details
     padding: 16px 28px
     border: 1px solid
@@ -331,7 +336,7 @@ html body .container.wave
         gap: 20px
     +media(1024px)
         width: 50%
-        gap: 0 
+        gap: 0
 
 .wave-firm-info
     font-size: 16px
@@ -378,7 +383,6 @@ html body .container.wave
     font-family: "Rubik"
 .wave-subtitle
     margin-bottom: 39px
-    height: 75px
     font-size: 16px
     color: #ffffff
     font-weight: 400
@@ -400,7 +404,6 @@ html body .container.wave
     text-align: center
 .desert-island
     gap: 30px
-
 
 .card-logo
     width: 100%
@@ -559,6 +562,10 @@ html body .container.wave
         border-right: none
         top: 15px
         left: 0
+        +media(320px)
+            display: none
+        +media(768px)
+            display: block
     &::after
         content: ""
         position: absolute
@@ -569,13 +576,17 @@ html body .container.wave
         top: 15px
         right: 0
         opacity: 0.102
+        +media(320px)
+            display: none
+        +media(768px)
+            display: block
 .adapt-figure
     +media(768px)
         width: 100%
 .adapt-col
     +media(768px)
         width: 50%
-.adapt-cols 
+.adapt-cols
     +media(768px)
         align-items: center
 .just
@@ -599,8 +610,6 @@ html body .container.wave
         display: flex
     .header-img
         justify-content: center
-
-    
 
 @import  components/header
 @import  components/footer
