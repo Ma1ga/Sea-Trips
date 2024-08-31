@@ -1,3 +1,18 @@
+mixin card_travel(altText, imagePath, price, card_name, card_info, className="")
+  figure.header-card.d-sm-flex.justify-content-sm-between.align-items-sm-center.justify-content-lg-center.flex-lg-column.mb-3.col-12.col-sm-11.col-lg-4.g-col-4(class=className)
+    .card-img.container.text-center.mb-4.col-sm-6.col-xl-12
+      img(src=imagePath, alt=altText).col-sm-5.col-lg-6.col-xl-3.m-auto
+    figcaption.col-sm-6.col-lg-12
+      h2.card-name.mb-2 #{card_name}
+      p.price
+        | #{price}
+        sup *
+      .card-info-container
+        p.card-info #{card_info}
+
+mixin button(textButton, link, className="")
+    a(href="#" class=className)= textButton
+
 mixin card(altText, imagePath, price, name, info)
     .col.w-md-25.adapt-col
         figure.main-tours.adapt-figure

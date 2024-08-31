@@ -1,9 +1,38 @@
 @import helpers/vars
 @import helpers/mixins
+
+body
+    background: #f4f7f9 !important
+
+.button
+    display: inline-block
+    border-radius: 23px
+    -webkit-transition: .3s
+    -o-transition: .3s
+    transition: .3s
+    -webkit-filter: drop-shadow(0 4px 10.5px rgba(193, 139, 1, .24))
+    filter: drop-shadow(0 4px 10.5px rgba(193, 139, 1, .24))
+    background-color: #ffb700
+    border: 2px solid #ffb700
+    padding: 11px 30px
+    font-size: 16px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #fdfcfb
+    font-weight: 400
+    font-family: Rubik
+    text-align: center
+    text-decoration: none
+    &:hover
+        color: #ffb700
+        // font-weight: bold
+        background-color: transparent
+
 header
-    padding-bottom: 200px
-    background: url(../img/header-background-trips.jpg) no-repeat
-    background-position: center top
+    padding-top: 34px
+    background: url(../img/header_bg.png) no-repeat
+    background-position: center bottom
+    margin-bottom: 87px
 
 .header
     margin-bottom: 148px
@@ -19,14 +48,13 @@ header
     background-color: #edf2f5
     +media(1020px)
         height: 70%
-.gapps 
+.gapps
     +media(1020px)
         gap: 10px
 .container
     align-items: center
     display: flex
     justify-content: space-between
-    padding: 20px
 
     h2
         font-size: 36px
@@ -69,24 +97,6 @@ header
         font-family: "Rubik"
         text-align: center
 
-    .button
-        border: 2px solid #ffb700
-        border-radius: 25px
-        padding: 12px 30px
-        align-items: center
-        background-color: #ffb700
-        font-size: 16px
-        letter-spacing: 1px
-        line-height: 110px
-        text-transform: uppercase
-        color: #fdfcfb
-        font-weight: 400
-        font-family: "Rubik"
-        text-align: center
-        text-decoration: none
-        &:hover
-            color: #999
-            transition: 0.5
     .header-footer
         font-size: 36px
         letter-spacing: 1px
@@ -146,6 +156,7 @@ body .company
         justify-content: center
         max-width: 960px
         gap: 31px
+        margin-bottom: 80px
 
 .company-main
     font-size: 36px
@@ -179,6 +190,146 @@ body .company
     font-weight: 400
     font-family: "Rubik"
     text-align: center
+
+.info-company-container
+    .info-company
+        font-size: 36px
+        letter-spacing: 1px
+        line-height: 40px
+        text-transform: uppercase
+        color: #333
+        font-weight: 400
+        font-family: "Rubik"
+    .our-company
+        font-size: 16px
+        line-height: 22px
+        color: #555555
+        font-weight: 400
+        font-style: italic
+        font-family: "Rubik"
+
+.card-premium
+    position: relative
+    &::before
+        content: ""
+        width: 60px
+        height: 60px
+        background: url("../img/green-star.png")
+        background-size: contain
+        position: absolute
+        top: 0
+        left: 0
+
+.price
+    font-size: 24px
+    color: #0099ff
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+
+.header-card
+    .card-img
+        width: fit-content
+    img
+        width: fit-content
+        margin: 0 !important
+        +media(1024px)
+            margin: auto !important
+.header-card,
+.card-bottom
+    padding: 30px 20px
+
+    .card-name
+        font-size: 18px
+        color: #333333
+        font-weight: 400
+        font-family: "Rubik"
+        text-align: center
+
+    .card-info-container
+        margin: auto
+
+        .card-info
+            font-size: 13px
+            line-height: 19px
+            color: #999999
+            font-weight: 400
+            font-family: "Rubik"
+
+    &:hover
+        box-shadow: 0px 4px 10.5px rgba(3, 20, 31, 0.05)
+        background-color: #fff
+
+.hidden
+    display: none
+
+// .info-company-container
+.our-company
+    margin-bottom: 48px
+.button
+    margin-bottom: 20px
+
+.company-price
+    font-size: 13px
+    line-height: 19px
+    color: #bbb
+    font-weight: 400
+    font-family: "Rubik"
+
+.header-end
+    text-align: center
+.your-plan
+    font-size: 27px
+    letter-spacing: 1px
+    line-height: 30px
+    text-transform: uppercase
+    color: #333
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+    +media(375px)
+    font-size: 33px
+    line-height: 40px
+    +media(425px)
+    font-size: 36px
+    +media(577px)
+    font-size: 38px
+    +media(1024px)
+    font-size: 40px
+    line-height: 50px
+
+.our-company
+    font-size: 16px
+    line-height: 24px
+    color: #333
+    font-weight: 400
+    font-style: italic
+    font-family: "Rubik"
+    text-align: center
+
+.double-arrow
+    width: 18px
+    height: 20px
+
+.see-all
+    font-size: 12px
+    letter-spacing: 0px
+    line-height: 110px
+    text-decoration: none
+    text-transform: uppercase
+    color: #0099ff
+    font-weight: 400
+    font-family: "Rubik"
+svg
+    fill: #0099ff
+    transition: 0.2s
+    margin-left: 10px
+    &:hover
+        color: #4e4d4a
+        text-decoration: underline
+    svg
+        fill: #4e4d4a
+        transform: rotate(90deg)
 
 .company-main-warning
     max-width: 228px
@@ -333,6 +484,7 @@ html body .container.wave
     background-position: center
     background-size: cover
     margin: 0
+    margin-bottom: 72px
     +media(320px)
         padding: 0
         gap: 50px
@@ -344,7 +496,7 @@ html body .container.wave
 .wave-main
     +media(320px)
         width: 100%
-        gap: 20px
+        // gap: 20px
     +media(625px)
         width: 50%
     +media(768px)
@@ -372,13 +524,21 @@ html body .container.wave
     font-family: "Rubik"
     text-align: center
 .wave-logo
-    font-size: 51px
+    font-size: 30px
     letter-spacing: 2px
-    line-height: 66px
+    line-height: 30px
     text-transform: uppercase
     color: #ffffff
     font-weight: 400
     font-family: "Rubik"
+    +media(1024px)
+        font-size: 40px
+        line-height: 50px
+
+    +media(1440px)
+        font-size: 51px
+        line-height: 66px
+
 .wave-button
     display: block
     width: 35%
@@ -389,13 +549,21 @@ html body .container.wave
     +media(1024px)
         width: 35%
 .wave-logo-blue
-    font-size: 55px
+    font-size: 30px
     letter-spacing: 2px
-    line-height: 66px
+    line-height: 30px
     text-transform: uppercase
     color: #0099ff
     font-weight: 400
     font-family: "Rubik"
+    +media(1024px)
+        font-size: 40px
+        line-height: 50px
+
+    +media(1440px)
+        font-size: 51px
+        line-height: 66px
+
 .wave-subtitle
     margin-bottom: 39px
     font-size: 16px
@@ -588,7 +756,7 @@ html body .container.wave
         width: 100%
     +media(1024px)
         width: 50%
-    
+
     &::before
         content: ""
         height: 100%

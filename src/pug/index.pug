@@ -13,72 +13,24 @@ html(lang="uk")
         include helpers/vars.pug
         include helpers/mixins.pug
         include components/header.pug
-        .container.company.flex-column.d-flex.flex-column.flex-lg-row
-            .row.flex-column.d-flex.text-center
-                .col 
-                    h3.company-main про нашу <br> компанію
-                    p.company-main-info Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
-                .col.company-main-subtitle 
-                    a.company-main-button(href="#") Детальніше
-                    p.company-main-warning - зверніть увагу, зміна ціни може залежати від курсу долара.
-            .row.flex-md-row.d-flex.text-center.flex-column.flex-lg-row
-                .col
-                    figure.company-main-tour
-                        img.company-main-tour-logo(src="img/bike.png" alt="#")
-                        figcaption.company-main-figcaption 
-                            p.company-main-tour-title Тур на велосипедах
-                            p.company-main-tour-price 335 грн*
-                            p.company-main-tour-info Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.
-                .col
-                    figure.company-main-tour
-                        .position-relative
-
-                            svg.d-flex.position-absolute(top-0 left-0)(version="1.1" xmlns="http://www.w3.org/2000/svg" width="60" height="60")
-                                path(
-                                d="M0 0 C19.8 0 39.6 0 60 0 C56.20834147 4.42360162 52.55902163 8.56685624 48.46948242 12.65991211 C47.95327332 13.17787354 47.43706421 13.69583496 46.9052124 14.22949219 C45.22444461 15.91460729 43.54011073 17.59610245 41.85546875 19.27734375 C40.6780207 20.45546627 39.50072105 21.63373714 38.32356262 22.81214905 C35.87007913 25.2670993 33.41481459 27.72025018 30.95825195 30.17211914 C27.80279266 33.32184384 24.65189484 36.4760878 21.50228405 39.63165951 C19.07897374 42.05857094 16.65330227 44.48311106 14.22689247 46.90692329 C13.06308821 48.07005899 11.90003042 49.23394206 10.7377224 50.39857292 C9.12206237 52.01675614 7.50326051 53.63172723 5.88354492 55.24584961 C4.96232346 56.16627548 4.04110199 57.08670135 3.09196472 58.03501892 C1 60 1 60 0 60 C0 40.2 0 20.4 0 0 Z"
-                                fill="#25CB15"
-                                transform="translate(0,0)"
-                                )
-                                path(
-                                d="M0 0 C0.66 0 1.32 0 2 0 C2.33 1.65 2.66 3.3 3 5 C4.65 5 6.3 5 8 5 C8 5.66 8 6.32 8 7 C7.01 7.495 7.01 7.495 6 8 C6 10.31 6 12.62 6 15 C5.0925 14.649375 4.185 14.29875 3.25 13.9375 C0.12241564 13.03531221 -1.05208081 12.86618493 -4 14 C-3.9071875 12.88625 -3.9071875 12.88625 -3.8125 11.75 C-4.03094296 8.54616994 -4.90250005 7.35968744 -7 5 C-5.02 5 -3.04 5 -1 5 C-0.67 3.35 -0.34 1.7 0 0 Z"
-                                fill="#F0FBEF"
-                                transform="translate(18,9)"
-                                )
-                            img.company-main-tour-logo(src="img/ostrov.png" alt="#")
-
-                        figcaption.company-main-figcaption 
-                            p.company-main-tour-title Екскурсія на острові
-                            p.company-main-tour-price 500 грн*
-                            p.company-main-tour-info Подорож на острів занурить Вас у незабутні пригоди. Неймовірна краса у будь-яку пору року.
-
-
-                .col 
-                    figure.company-main-tour
-                        .position-relative
-
-                            svg.d-flex.position-absolute(top-0 left-0)(version="1.1" xmlns="http://www.w3.org/2000/svg" width="60" height="60")
-                                path(
-                                d="M0 0 C19.8 0 39.6 0 60 0 C56.20834147 4.42360162 52.55902163 8.56685624 48.46948242 12.65991211 C47.95327332 13.17787354 47.43706421 13.69583496 46.9052124 14.22949219 C45.22444461 15.91460729 43.54011073 17.59610245 41.85546875 19.27734375 C40.6780207 20.45546627 39.50072105 21.63373714 38.32356262 22.81214905 C35.87007913 25.2670993 33.41481459 27.72025018 30.95825195 30.17211914 C27.80279266 33.32184384 24.65189484 36.4760878 21.50228405 39.63165951 C19.07897374 42.05857094 16.65330227 44.48311106 14.22689247 46.90692329 C13.06308821 48.07005899 11.90003042 49.23394206 10.7377224 50.39857292 C9.12206237 52.01675614 7.50326051 53.63172723 5.88354492 55.24584961 C4.96232346 56.16627548 4.04110199 57.08670135 3.09196472 58.03501892 C1 60 1 60 0 60 C0 40.2 0 20.4 0 0 Z"
-                                fill="#25CB15"
-                                transform="translate(0,0)"
-                                )
-                                path(
-                                d="M0 0 C0.66 0 1.32 0 2 0 C2.33 1.65 2.66 3.3 3 5 C4.65 5 6.3 5 8 5 C8 5.66 8 6.32 8 7 C7.01 7.495 7.01 7.495 6 8 C6 10.31 6 12.62 6 15 C5.0925 14.649375 4.185 14.29875 3.25 13.9375 C0.12241564 13.03531221 -1.05208081 12.86618493 -4 14 C-3.9071875 12.88625 -3.9071875 12.88625 -3.8125 11.75 C-4.03094296 8.54616994 -4.90250005 7.35968744 -7 5 C-5.02 5 -3.04 5 -1 5 C-0.67 3.35 -0.34 1.7 0 0 Z"
-                                fill="#F0FBEF"
-                                transform="translate(18,9)"
-                                )
-
-                        img.company-main-tour-logo(src="img/agreement.png" alt="#")
-
-
-
-                        figcaption.company-main-figcaption 
-                            p.company-main-tour-title Екскурсія на острові
-                            p.company-main-tour-price 250 грн*
-                            p.company-main-tour-info Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року .
-                .row 
-                    .col.text-center 
-                        a.company-main-tour-button-plan(href="") дивитись усі плани
+        //- .container.company.flex-column.d-flex.flex-column.flex-lg-row
+        .wrapper.col-xl-9.col-lg-10.col-md-11.col-12.m-auto.container.mb-5
+            section
+                .container.m-auto.col.d-flex.flex-column.align-items-center.flex-xl-row
+                    .col-12.col-xl-3
+                        .info-company-container.col-12.col-lg-8.col-xl-12
+                            p.info-company про нашу компанію
+                            p.our-company Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+                            +button("детальніше", "#", "button")
+                            p.company-price * - зверніть увагу, зміна ціни може залежати від курсу долара.
+                    .card-container.container.col-12.col-lg-12.d-flex.flex-column.align-items-center.align-items-lg-stretch.flex-lg-row.gap-4.col-xl-9
+                            +card_travel("іконка велосипеда", "img/bike.png", "335 грн", "Тур на велосипедах", "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.")                            
+                            +card_travel("іконка острів", "img/ostrov.png", "500 грн", "Екскурсія на острів", "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року.", "card-premium")
+                            +card_travel("іконка контакта", "img/agreement.png", "250 грн.", "Особливе замовлення", "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші.", "card-premium")
+                div.col-12.text-center
+                    a(href="#").see-all дивитись усі плани
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2 12l-4.5 4.5 1.527 1.5 5.973-6-5.973-6-1.527 1.5 4.5 4.5z"/></svg>
+                    hr.m-0.mb-5
         .container.company.flex-md-row.flex-column.align-items-stretch
             .row.w-100
                 img.company-img.w-100.w-md-0(src="img/deserted-ostrov.jpg" alt="")
