@@ -84,7 +84,7 @@ html(lang="uk")
                 img.company-img.w-100.w-md-0(src="img/deserted-ostrov.jpg" alt="")
             .row.align-self-start.flex-column
                 h3.deserted-island-title Дивовижний безлюдний острів, який зводить людей з розуму
-                .d-flex.flex-column.flex-md-row
+                .d-flex.flex-column.flex-md-row.gapps
                     div.text_and_button
                         .col.desert-island.d-flex.flex-column
                             p.deserted-island-subtitle Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
@@ -93,14 +93,14 @@ html(lang="uk")
                             a.deserted-island-buy(href="#") Замовити Тур
                             a.deserted-island-details(href="#") Детальніше 
                     .col-md-4
-                        figure 
+                        figure.back-figure 
                             p.company-main-tour-price 575 грн./день
                             figcaption 
                                 p.company-main-tour-info В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
 
 
         .container.wave.w-100.flex-md-row.flex-column
-            .row.w-100.wave-main.flex-column.w-md-50.p-10
+            .row.wave-main.flex-column.w-md-50.p-10
                 .col
                     h3.wave-logo СПІЙМАЙ ХВИЛЮ
                 .col
@@ -108,7 +108,7 @@ html(lang="uk")
                     p.wave-subtitle Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
                 .col 
                     a.wave-button.company-main-button(href="#") Детальніше
-            .row.w-100.man-oleg.w-md-50.flex-column.text-center
+            .row.man-oleg.w-md-50.flex-column.text-center
                 .col 
                     svg(version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 37" width="42" height="37")
                         style.
@@ -144,15 +144,15 @@ html(lang="uk")
             .row.flex-md-row.flex-column.adapt-cards
                 .col.flex-md-row.flex-column.d-flex.gap-4.justify-content-md-center
                     figure.info-eat
-                        .col.d-flex.gx-3
-                            //- svg(class="svg")(width="60px", height="70px", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
-                            //-     g(id="SVGRepo_bgCarrier", stroke-width="0")
-                            //-     g(id="SVGRepo_tracerCarrier", stroke-linecap="round", stroke-linejoin="round")
-                            //-     g(id="SVGRepo_iconCarrier")
-                            //-         path(d="M19 9V17.8C19 18.9201 19 19.4802 18.782 19.908C18.5903 20.2843 18.2843 20.5903 17.908 20.782C17.4802 21 16.9201 21 15.8 21H8.2C7.07989 21 6.51984 21 6.09202 20.782C5.71569 20.5903 5.40973 20.2843 5.21799 19.908C5 19.4802 5 18.9201 5 17.8V6.2C5 5.07989 5 4.51984 5.21799 4.09202C5.40973 3.71569 5.71569 3.40973 6.09202 3.21799C6.51984 3 7.0799 3 8.2 3H13M19 9L13 3M19 9H14C13.4477 9 13 8.55228 13 8V3" stroke="#ffb700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-                        .col
-                            p.info-eat-title Графік роботи <br> готелів.xls
-                            p.info-eat-size-file Розмір файла: 10Mb
+                        .d-flex 
+                            svg(class="svg")(width="60px", height="70px", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                g(id="SVGRepo_bgCarrier", stroke-width="0")
+                                g(id="SVGRepo_tracerCarrier", stroke-linecap="round", stroke-linejoin="round")
+                                g(id="SVGRepo_iconCarrier")
+                                    path(d="M19 9V17.8C19 18.9201 19 19.4802 18.782 19.908C18.5903 20.2843 18.2843 20.5903 17.908 20.782C17.4802 21 16.9201 21 15.8 21H8.2C7.07989 21 6.51984 21 6.09202 20.782C5.71569 20.5903 5.40973 20.2843 5.21799 19.908C5 19.4802 5 18.9201 5 17.8V6.2C5 5.07989 5 4.51984 5.21799 4.09202C5.40973 3.71569 5.71569 3.40973 6.09202 3.21799C6.51984 3 7.0799 3 8.2 3H13M19 9L13 3M19 9H14C13.4477 9 13 8.55228 13 8V3" stroke="#ffb700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+                            .col.unsets
+                                p.info-eat-title Графік роботи <br> готелів.xls
+                                p.info-eat-size-file Розмір файла: 10Mb
                         figcaption.eat-figcaption.d-flex.flex-column.align-items-left
                             p.info-eat-subtitle Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.
                             a.d-block.info-eat-download(href="#") Скачати
@@ -162,21 +162,21 @@ html(lang="uk")
 
                                 
                     figure.info-hotel
-                        .col
-                            //- svg(class="svg")(width="60px", height="70px", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
-                            //-     g(id="SVGRepo_bgCarrier", stroke-width="0")
-                            //-     g(id="SVGRepo_tracerCarrier", stroke-linecap="round", stroke-linejoin="round")
-                            //-     g(id="SVGRepo_iconCarrier")
-                            //-         path(d="M19 9V17.8C19 18.9201 19 19.4802 18.782 19.908C18.5903 20.2843 18.2843 20.5903 17.908 20.782C17.4802 21 16.9201 21 15.8 21H8.2C7.07989 21 6.51984 21 6.09202 20.782C5.71569 20.5903 5.40973 20.2843 5.21799 19.908C5 19.4802 5 18.9201 5 17.8V6.2C5 5.07989 5 4.51984 5.21799 4.09202C5.40973 3.71569 5.71569 3.40973 6.09202 3.21799C6.51984 3 7.0799 3 8.2 3H13M19 9L13 3M19 9H14C13.4477 9 13 8.55228 13 8V3" stroke="#ffb700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-                        .col
-                            p.info-eat-title Інформація про <br> харчування.xls
-                            p.info-eat-size-file Розмір файла: 10Mb
+                        .d-flex 
+                            svg(class="svg")(width="60px", height="70px", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                g(id="SVGRepo_bgCarrier", stroke-width="0")
+                                g(id="SVGRepo_tracerCarrier", stroke-linecap="round", stroke-linejoin="round")
+                                g(id="SVGRepo_iconCarrier")
+                                    path(d="M19 9V17.8C19 18.9201 19 19.4802 18.782 19.908C18.5903 20.2843 18.2843 20.5903 17.908 20.782C17.4802 21 16.9201 21 15.8 21H8.2C7.07989 21 6.51984 21 6.09202 20.782C5.71569 20.5903 5.40973 20.2843 5.21799 19.908C5 19.4802 5 18.9201 5 17.8V6.2C5 5.07989 5 4.51984 5.21799 4.09202C5.40973 3.71569 5.71569 3.40973 6.09202 3.21799C6.51984 3 7.0799 3 8.2 3H13M19 9L13 3M19 9H14C13.4477 9 13 8.55228 13 8V3" stroke="#ffb700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+                            .col
+                                p.info-eat-title Графік роботи <br> готелів.xls
+                                p.info-eat-size-file Розмір файла: 10Mb
                         figcaption.d-flex.flex-column.align-items-left 
-                            p.info-eat-subtitle Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.
-                            a.d-block.info-eat-download(href="#") Скачати
-                                svg(xmlns="http://www.w3.org/2000/svg" version="1.1" width="15px" height="11px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink")
-                                    g
-                                        path(style="opacity:0.573" fill="#ffbd13" d="M 6.5,-0.5 C 7.16667,-0.5 7.83333,-0.5 8.5,-0.5C 10.2837,1.36727 12.2837,3.03394 14.5,4.5C 14.5,6.16667 14.5,7.83333 14.5,9.5C 13.8333,9.5 13.5,9.83333 13.5,10.5C 9.5,10.5 5.5,10.5 1.5,10.5C 1.16667,9.5 0.5,8.83333 -0.5,8.5C -0.5,7.16667 -0.5,5.83333 -0.5,4.5C 2.0472,3.06643 4.38053,1.39976 6.5,-0.5 Z M 6.5,3.5 C 7.20895,2.59603 8.20895,2.26269 9.5,2.5C 9.56138,4.59216 10.5614,6.09216 12.5,7C 9.70551,8.5569 6.70551,8.89024 3.5,8C 2.74467,3.55599 3.74467,3.38932 6.5,7.5C 7.78202,6.04156 7.78202,4.70823 6.5,3.5 Z")
+                        p.info-eat-subtitle Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.
+                        a.d-block.info-eat-download(href="#") Скачати
+                            svg(xmlns="http://www.w3.org/2000/svg" version="1.1" width="15px" height="11px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                g
+                                    path(style="opacity:0.573" fill="#ffbd13" d="M 6.5,-0.5 C 7.16667,-0.5 7.83333,-0.5 8.5,-0.5C 10.2837,1.36727 12.2837,3.03394 14.5,4.5C 14.5,6.16667 14.5,7.83333 14.5,9.5C 13.8333,9.5 13.5,9.83333 13.5,10.5C 9.5,10.5 5.5,10.5 1.5,10.5C 1.16667,9.5 0.5,8.83333 -0.5,8.5C -0.5,7.16667 -0.5,5.83333 -0.5,4.5C 2.0472,3.06643 4.38053,1.39976 6.5,-0.5 Z M 6.5,3.5 C 7.20895,2.59603 8.20895,2.26269 9.5,2.5C 9.56138,4.59216 10.5614,6.09216 12.5,7C 9.70551,8.5569 6.70551,8.89024 3.5,8C 2.74467,3.55599 3.74467,3.38932 6.5,7.5C 7.78202,6.04156 7.78202,4.70823 6.5,3.5 Z")
                                 
 
 

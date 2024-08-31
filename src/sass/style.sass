@@ -1,6 +1,7 @@
 @import helpers/vars
 @import helpers/mixins
 header
+    padding-bottom: 200px
     background: url(../img/header-background-trips.jpg) no-repeat
     background-position: center top
 
@@ -14,6 +15,13 @@ header
 .col .general
     +media(768px)
         width: 100%
+.back-figure
+    background-color: #edf2f5
+    +media(1020px)
+        height: 70%
+.gapps 
+    +media(1020px)
+        gap: 10px
 .container
     align-items: center
     display: flex
@@ -97,6 +105,7 @@ header
         font-family: "Rubik"
         text-align: center
 .header-title-info
+    margin-bottom: 100px
     +media(1024px)
         margin-bottom: 263px
     .button:hover
@@ -126,13 +135,14 @@ header
         transform: translateX(-50%)
         width: 40%
         min-width: 300px
-        height: 95px
+        height: 64px
         opacity: 0.6
         border-left: 4px #fff solid
         border-bottom: 4px #fff solid
         border-right: 4px #fff solid
 
 body .company
+        width: 90%
         justify-content: center
         max-width: 960px
         gap: 31px
@@ -333,7 +343,12 @@ html body .container.wave
         gap: 20px
 .wave-main
     +media(320px)
+        width: 100%
         gap: 20px
+    +media(625px)
+        width: 50%
+    +media(768px)
+        width: 100%
     +media(1024px)
         width: 50%
         gap: 0
@@ -408,7 +423,7 @@ html body .container.wave
 .card-logo
     width: 100%
 .additional-info
-    font-size: 36px
+    font-size: 30px
     letter-spacing: 1px
     text-transform: uppercase
     color: #333333
@@ -423,6 +438,8 @@ html body .container.wave
     +media(1024px)
         width: 30%
         height: 80%
+    +media(768px)
+        height: 82%
 
 .info-hotel
     padding: 15px
@@ -433,6 +450,8 @@ html body .container.wave
     +media(1024px)
         width: 30%
         height: 80%
+    +media(768px)
+        height: 82%
 .info-eat-title
     font-size: 18px
     line-height: 24px
@@ -466,11 +485,17 @@ html body .container.wave
     font-family: "Rubik"
     text-align: center
     text-decoration: none
+    +media(768px)
+        width: 90%
+    +media(1020px)
+        width: 65%
 .info-consult
     padding: 15px
     position: relative
     text-align: center
     padding: 0 45px
+    +media(768px)
+        height: 82%
     &::before
         content: ""
         position: absolute
@@ -510,12 +535,21 @@ html body .container.wave
     font-weight: 400
     font-family: "Rubik"
 .consult-button
+    position: relative
     text-decoration: none
     font-size: 18px
     line-height: 26px
     color: #0099ff
     font-weight: 400
     font-family: "Rubik"
+    &::before
+        width: 16px
+        height: 16px
+        content: ""
+        position: absolute
+        top: 3px
+        left: -27px
+        background-image: url(https://cdn.discordapp.com/attachments/1270384777169604650/1279422513725571102/photo_5377749524103160790_m.jpg?ex=66d46291&is=66d31111&hm=29053e53857d95da528646a9b099a665263813c85b5b7bc2d3c5e0c966462b94&)
 .consult-name
     font-size: 18px
     line-height: 26px
@@ -550,8 +584,11 @@ html body .container.wave
 .man-oleg
     position: relative
     text-align: center
+    +media(320px)
+        width: 100%
     +media(1024px)
         width: 50%
+    
     &::before
         content: ""
         height: 100%
@@ -602,7 +639,8 @@ html body .container.wave
         width: 100%
     +media(1024px)
         width: 80%
-
+.unsets
+    flex: unset
 @media (max-width: 768px)
     .header-subtitle
         flex-direction: column
