@@ -31,8 +31,11 @@ body
 header
     padding-top: 34px
     background: url(../img/header_bg.png) no-repeat
-    background-position: center bottom
+    background-size: cover
+    background-position: center top
     margin-bottom: 87px
+    +media(768px)
+        background-position: center bottom
 
 .header
     margin-bottom: 148px
@@ -55,7 +58,6 @@ header
     align-items: center
     display: flex
     justify-content: space-between
-
     h2
         font-size: 36px
         color: #ffffff
@@ -64,6 +66,8 @@ header
         text-align: center
         +media(768px)
             text-align: left
+
+
     .header-title
         font-size: 14px
         letter-spacing: 1px
@@ -87,7 +91,7 @@ header
         text-align: center
     .logo-p
         max-width: 528px
-        height: 62px
+        // height: 62px
         font-size: 16px
         line-height: 24px
         color: #ffffff
@@ -152,12 +156,19 @@ header
         border-right: 4px #fff solid
 
 body .company
-        width: 90%
-        justify-content: center
-        max-width: 960px
-        gap: 31px
-        margin-bottom: 80px
-
+    width: 90%
+    justify-content: center
+    max-width: 960px
+    gap: 31px
+    margin-bottom: 80px
+    .company-img
+        height: 100%
+    .company-img-container
+        display: block
+        +media(500px)
+            display: none
+        +media(1024px)
+            display: block
 .company-main
     font-size: 36px
     letter-spacing: 1px
@@ -216,6 +227,7 @@ body .company
         height: 60px
         background: url("../img/green-star.png")
         background-size: contain
+        z-index: 6
         position: absolute
         top: 0
         left: 0
@@ -226,6 +238,7 @@ body .company
     font-weight: 400
     font-family: "Rubik"
     text-align: center
+    margin: 0
 
 .header-card
     .card-img
@@ -235,9 +248,42 @@ body .company
         margin: 0 !important
         +media(1024px)
             margin: auto !important
+
+    h2.card-name
+        font-size: 18px
+        color: #333
+        font-weight: 400
+        font-family: Rubik
+        text-align: center
+    &:hover
+        box-shadow: 0px 4px 10.5px rgba(3, 20, 31, 0.05)
+        background-color: #fff
+
+.bike-tour
+    .card-img
+        position: relative
+        &::after  
+            content: ""
+            width: 60px
+            height: 100%
+            z-index: 4
+            background: url(../img/bike_tour_left.jpg)
+            background-size: contain
+            background-position: center
+            position: absolute
+            top: 0
+            left: 0
+
 .header-card,
 .card-bottom
     padding: 30px 20px
+    margin: 0 !important
+
+.card-bottom
+    margin: 0 !important
+    figcaption
+        height: 100%
+        padding-bottom: 20px
 
     .card-name
         font-size: 18px
@@ -320,16 +366,31 @@ body .company
     color: #0099ff
     font-weight: 400
     font-family: "Rubik"
-svg
-    fill: #0099ff
-    transition: 0.2s
-    margin-left: 10px
-    &:hover
-        color: #4e4d4a
-        text-decoration: underline
+    position: relative
     svg
-        fill: #4e4d4a
-        transform: rotate(90deg)
+        position: absolute
+        top: 50%
+        right: -18px
+        transform: translateY(-50%)
+        fill: #0099ff
+        margin-left: 7px
+
+.order-button
+    font-size: 13px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #ffb700
+    fill: #ffb700
+    font-family: Rubik
+    text-decoration: none
+    -webkit-transition: .2s
+    -o-transition: .2s
+    transition: .2s
+
+.company-img
+    display: block
+    +media(500px)
+        display: none
 
 .company-main-warning
     max-width: 228px
@@ -347,6 +408,7 @@ svg
     padding: 25px
 .company-img
     +media(1024px)
+        display: block
         width: 60%
 .main-tours
     +media(1024px)
@@ -412,7 +474,7 @@ svg
     text-transform: uppercase
     color: #333333
     font-weight: 400
-    font-family: "Rubik"
+    // font-family: "Rubik"
 .deserted-island-subtitle
 
     flex-direction: row
@@ -443,21 +505,24 @@ svg
 .deserted-island-buy
     border-radius: 23px
     border: 1px solid
-    padding: 16px 28px
-    background-color: #ffb700
+    padding: 11px 28px
     font-size: 16px
     letter-spacing: 1px
     text-decoration: none
     text-transform: uppercase
-    color: #fff
+    border: 2px solid #ffb700
+    color: #ffb700
     font-weight: 400
     font-family: "Rubik"
     text-align: center
-    a:hover
+    transition: 0.3s
+    &:hover
+        color: #fff
+        background-color: #ffb700
         filter: drop-shadow(0px 4px 10.5px rgba(193,139,1,0.24))
 
 .deserted-island-details
-    padding: 16px 28px
+    padding: 11px 28px
     border: 1px solid
     border-radius: 23px
     background-color: rgba(0,153,255,0)
@@ -466,10 +531,14 @@ svg
     letter-spacing: 1px
     text-decoration: none
     text-transform: uppercase
+    transition: 0.3s
     color: #0099ff
     font-weight: 400
     font-family: "Rubik"
     text-align: center
+    &:hover
+        background: #0099ff
+        color: #fff
 .row.deserted-island-price
     +media(320px)
         width: 100%
@@ -486,13 +555,22 @@ html body .container.wave
     margin: 0
     margin-bottom: 72px
     +media(320px)
-        padding: 0
+        padding: 20px
         gap: 50px
     +media(768px)
         padding: 20px
     +media(1024px)
         padding: 73px
         gap: 20px
+
+    .wrapper
+        display: flex
+        flex-direction: column
+        gap: 40px
+        +media(1024px)
+            gap: 0
+            flex-direction: row
+
 .wave-main
     +media(320px)
         width: 100%
@@ -504,6 +582,8 @@ html body .container.wave
     +media(1024px)
         width: 50%
         gap: 0
+
+
 
 .wave-firm-info
     font-size: 16px
@@ -532,22 +612,22 @@ html body .container.wave
     font-weight: 400
     font-family: "Rubik"
     +media(1024px)
-        font-size: 40px
         line-height: 50px
 
     +media(1440px)
-        font-size: 51px
+        font-size: 45px
         line-height: 66px
+    +media(1600px)
+        font-size: 51px
 
 .wave-button
     display: block
-    width: 35%
-    +media(320px)
-        width: 100%
-    +media(768px)
-        width: 55%
-    +media(1024px)
-        width: 35%
+    width: fit-content
+    transition: 0.3s
+    border: 2px solid #ffb700
+    &:hover
+        background: unset
+        color: #ffb700
 .wave-logo-blue
     font-size: 30px
     letter-spacing: 2px
@@ -556,13 +636,11 @@ html body .container.wave
     color: #0099ff
     font-weight: 400
     font-family: "Rubik"
-    +media(1024px)
-        font-size: 40px
-        line-height: 50px
-
     +media(1440px)
-        font-size: 51px
+        font-size: 45px
         line-height: 66px
+    +media(1600px)
+        font-size: 51px
 
 .wave-subtitle
     margin-bottom: 39px
@@ -590,6 +668,150 @@ html body .container.wave
 
 .card-logo
     width: 100%
+
+.extra-info
+    p
+        font-size: 36px
+        letter-spacing: 1px
+        line-height: 40px
+        text-transform: uppercase
+        color: #333
+        font-weight: 400
+        font-family: "Rubik"
+
+.work-schedule
+    background: linear-gradient(to left, rgba(20, 47, 63, 0.4), rgba(20, 47, 63, 0.4)), url(../img/background-info-eat.png)
+    background-size: 100% 100%
+
+.nutrition
+    background: linear-gradient(to left, rgba(20, 47, 63, 0.4), rgba(20, 47, 63, 0.4)), url(../img/background-info-hotel.png)
+    background-size: 100% 100%
+
+.more-info-card
+    min-height: 270px
+    .card-name
+        font-size: 18px
+        line-height: 24px
+        color: #fff
+        font-family: "Rubik"
+    .weight
+        font-size: 13px
+        line-height: 19px
+        color: #bbb
+        font-family: "Rubik"
+    .card-info
+        font-size: 13px
+        line-height: 19px
+        color: #fef
+        font-weight: 400
+        font-family: "Rubik"
+        min-height: 100px
+        padding: 15px 0
+        +media(768px)
+            padding: unset
+            min-height: unset
+    .d-button
+        display: inline-block
+        border: 2px solid #ffb700
+        border-radius: 16px
+        font-size: 12px
+        letter-spacing: 0px
+        text-transform: uppercase
+        transition: 0.3s
+        color: #ffb700
+        text-decoration: none
+        font-family: "Rubik"
+        svg
+            width: 20px
+            height: 15px
+            transition: 0.3s
+            fill: #ffb700
+        &:hover
+            background-color: #ffb700
+            color: #fff
+            svg
+                fill: #fff
+
+.tell
+    font-size: 18px
+    line-height: 26px
+    color: #0099ff
+    font-family: "Rubik"
+    text-decoration: none
+    &:hover
+        text-decoration: underline
+    svg
+        width: 25px
+        height: 26px
+        fill: #0099ff
+
+.ask-question
+    position: relative
+    padding-top: 34px
+    &:before,
+    &:after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 10%
+        height: 100%
+        border: 4px solid #ffb700
+        border-right: none
+        +media(768px)
+        width: 20%
+
+    &:after
+        left: unset
+        right: 0px
+        border-right: 4px solid #ffb700
+        border-left: none
+
+    .card-name
+        width: 100%
+        position: absolute
+        top: -5px
+        left: 50%
+        transform: translateX(-50%)
+        font-size: 18px
+        letter-spacing: 1px
+        line-height: 18px
+        color: #333
+        font-weight: 400
+        font-family: "Rubik"
+
+.wrapper
+    hr
+        width: 100%
+        border-bottom: 1px solid #dfe3e6
+
+.card-info
+    font-size: 13px
+    line-height: 16px
+    color: #999
+    font-weight: 400
+    font-family: "Rubik"
+.people
+    position: relative
+
+    .name
+        font-size: 18px
+        line-height: 26px
+        color: #333
+        font-weight: 400
+        font-family: "Rubik"
+    .work
+        font-size: 13px
+        line-height: 19px
+        color: #999
+        font-weight: 400
+        font-family: "PT Sans"
+    img
+        position: absolute
+        left: 50%
+        bottom: -65px
+        transform: translateX(-50%)
+
 .additional-info
     font-size: 30px
     letter-spacing: 1px

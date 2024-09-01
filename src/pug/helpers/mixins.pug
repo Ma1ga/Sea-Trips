@@ -13,23 +13,22 @@ mixin card_travel(altText, imagePath, price, card_name, card_info, className="")
 mixin button(textButton, link, className="")
     a(href="#" class=className)= textButton
 
-mixin card(altText, imagePath, price, name, info)
-    .col.w-md-25.adapt-col
-        figure.main-tours.adapt-figure
-            .position-relative
-                        
-                svg.d-flex.position-absolute(top-0 left-0)(version="1.1" xmlns="http://www.w3.org/2000/svg" width="60" height="60")
-                    path(
-                    d="M0 0 C19.8 0 39.6 0 60 0 C56.20834147 4.42360162 52.55902163 8.56685624 48.46948242 12.65991211 C47.95327332 13.17787354 47.43706421 13.69583496 46.9052124 14.22949219 C45.22444461 15.91460729 43.54011073 17.59610245 41.85546875 19.27734375 C40.6780207 20.45546627 39.50072105 21.63373714 38.32356262 22.81214905 C35.87007913 25.2670993 33.41481459 27.72025018 30.95825195 30.17211914 C27.80279266 33.32184384 24.65189484 36.4760878 21.50228405 39.63165951 C19.07897374 42.05857094 16.65330227 44.48311106 14.22689247 46.90692329 C13.06308821 48.07005899 11.90003042 49.23394206 10.7377224 50.39857292 C9.12206237 52.01675614 7.50326051 53.63172723 5.88354492 55.24584961 C4.96232346 56.16627548 4.04110199 57.08670135 3.09196472 58.03501892 C1 60 1 60 0 60 C0 40.2 0 20.4 0 0 Z"
-                    fill="#25CB15"
-                    transform="translate(0,0)"
-                    )
-                    path(
-                    d="M0 0 C0.66 0 1.32 0 2 0 C2.33 1.65 2.66 3.3 3 5 C4.65 5 6.3 5 8 5 C8 5.66 8 6.32 8 7 C7.01 7.495 7.01 7.495 6 8 C6 10.31 6 12.62 6 15 C5.0925 14.649375 4.185 14.29875 3.25 13.9375 C0.12241564 13.03531221 -1.05208081 12.86618493 -4 14 C-3.9071875 12.88625 -3.9071875 12.88625 -3.8125 11.75 C-4.03094296 8.54616994 -4.90250005 7.35968744 -7 5 C-5.02 5 -3.04 5 -1 5 C-0.67 3.35 -0.34 1.7 0 0 Z"
-                    fill="#F0FBEF"
-                    transform="translate(18,9)"
-                    )
 
+mixin card(altText, imagePath, price, card_name, card_info, className="")
+  figure.card-bottom.mb-3.col-12.col-sm-10.col-md-5.col-xxl-3.p-0.g-col-1(class=className)
+    figcaption.col-12.d-flex.flex-column.justify-content-between
+      .card-img.container.text-center.mb-4.col-12.p-0
+        img(src=imagePath, alt=altText).col-12
+      .col-12.m-auto.px-3
+        h2.card-name.mb-2.text-start #{card_name}
+      .card-info-container.col-12.px-3
+        p.card-info.text-start.col-12.m-auto #{card_info}
+      .col-12.m-auto.d-flex.justify-content-between.px-3
+        .col-6.d-flex.justify-content-start.align-items-center
+          p.price.text-start
+            | #{price}
+        .col-6.d-flex.justify-content-end.align-items-center
+          a(href="#").order-button замовити <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2 12l-4.5 4.5 1.527 1.5 5.973-6-5.973-6-1.527 1.5 4.5 4.5z"/></svg>
 
 
                 //- svg.d-flex.position-absolute(top-60 left-0)(
@@ -82,13 +81,13 @@ mixin card(altText, imagePath, price, name, info)
                 //-         fill="#189cff"
                 //-         d="M 37.5,98.5 C 45.4894,97.3173 48.156,100.484 45.5,108C 38.2434,110.746 35.0768,108.246 36,100.5C 36.7172,99.9558 37.2172,99.2891 37.5,98.5 Z"
                 //-         )
-            img.card-logo(src=imagePath, alt=altText)
-            figcaption.company-figcaption
-                p.company-main-tour-title.tours-title #{name}
-                p.company-main-tour-info.tours-info #{info}
-                .col.company-main-tour-time.tours-time.flex-row
-                    p.company-main-tour-price.tours-price #{price} грн*
-                    a.company-main-tour-order.tours-order(href="#") Замовити 
+                //- img.card-logo(src=imagePath, alt=altText)
+                //- figcaption.company-figcaption
+                //-     p.company-main-tour-title.tours-title #{name}
+                //-     p.company-main-tour-info.tours-info #{info}
+                //-     .col.company-main-tour-time.tours-time.flex-row
+                //-         p.company-main-tour-price.tours-price #{price} грн*
+                //-         a.company-main-tour-order.tours-order(href="#") Замовити 
                         //- svg(version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 11" width="12" height="11")
                         //-     style.
                         //-         .a {
